@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crash-pod-2
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: ["/bin/sh", "-c", "echo 'Starting the app'; sleep 10; echo 'Crashing the app'; exit 1"]
+
